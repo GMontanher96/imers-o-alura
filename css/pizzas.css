@@ -1,0 +1,110 @@
+/* Reset de estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Estilo da lista de pizzas */
+.pizza-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Estilo para cada item de pizza */
+.pizza-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    width: calc(33.333% - 20px); /* Três pizzas por linha em telas maiores */
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.pizza-item:hover {
+    transform: translateY(-5px);
+}
+
+.pizza-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.pizza-info {
+    padding: 15px;
+}
+
+.pizza-name {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.pizza-description {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.pizza-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #27ae60;
+}
+
+.choose-pizza-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.choose-pizza-button:hover {
+    background-color: #c0392b;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    .pizza-item {
+        width: calc(50% - 20px); /* Dois produtos por linha em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .pizza-item {
+        width: 100%; /* Um produto por linha em telas pequenas */
+        max-width: none;
+    }
+}
