@@ -5,6 +5,101 @@
     box-sizing: border-box;
 }
 
+/* Reset básico e estilo para o body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para o header e o menu de navegação */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    background-color: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    border-radius: 5px;
+}
+
+/* Estilos para o menu */
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    padding: 5px 10px;
+    display: block;
+}
+
+.nav-list a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        border-bottom: 1px solid #575757;
+    }
+
+    .nav-list a {
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
+
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f9f9f9;
