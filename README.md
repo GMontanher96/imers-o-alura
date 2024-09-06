@@ -40,5 +40,6 @@ Se você quiser contribuir com melhorias, fique à vontade! Abra um pull request
 
 ** Contato **
 Se tiver dúvidas, sugestões ou apenas quiser bater um papo sobre comida, entre em contato! 🍴
+email: gabrielmontanherr@gmail.com
 
 Obrigado por visitar o InterFood! 🥳
