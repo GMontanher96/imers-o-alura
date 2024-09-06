@@ -1,18 +1,18 @@
 const restaurants = [
     {
-      "nome": "Restaurante",
-      "endereco": "Rua das Flores, 123",
-      "cidade": "São Paulo"
+      "nome": "Restaurante José Botiquin",
+      "endereco": "Rua Antonio Garcia de Almeida, 90",
+      "cidade": "Rio de Janeiro"
     },
     {
-      "nome": "Café Gourmet",
-      "endereco": "Avenida Paulista, 456",
-      "cidade": "São Paulo"
+      "nome": "Café Gostoso",
+      "endereco": "Avenida Comendador da Silva Martha, 120",
+      "cidade": "Bauru"
     },
     {
       "nome": "Pizzaria Bella Italia",
-      "endereco": "Rua dos Pães, 789",
-      "cidade": "Campinas"
+      "endereco": "Rua Marvel, 89",
+      "cidade": "Iacanga"
     },
     {
       "nome": "Churrascaria do Sul",
@@ -20,7 +20,17 @@ const restaurants = [
       "cidade": "Reginopólis"
     },
     {
-        "nome": "Churrascaria BRASIL",
+      "nome": "Marmitaria da Lurdes",
+      "endereco": "Antonio Garcia de Almeida, 95",
+      "cidade": "Reginopólis"
+    },
+    {
+      "nome": "Machado Lanches",
+      "endereco": "Antonio Fagundes de Souza, 44",
+      "cidade": "Pirajui"
+    },
+    {
+        "nome": "Lanches BRASIL",
         "endereco": "Orlando Ranieri, 1010",
         "cidade": "Bauru"
       }
