@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armário Virtual | Aluguel de armários online</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">Armário Digital</div>
+        <nav>
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#alugar">Alugar Armário</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="banner">
+        <h1>Encontre e Alugue Seu Armário</h1>
+        <p>Descubra armários disponíveis em sua área e faça o aluguel com facilidade.</p>
+        <button onclick="scrollToSection('alugar')">Encontre Seu Armário</button>
+    </section>
+    <section id="alugar">
+        <h2>Armários Disponíveis</h2>
+        <div class="filters">
+            <!-- Filtros aqui -->
+        </div>
+        <div class="armarios">
+            <section class="card-container">
+                <div class="card">
+                    <div class="status disponível">Disponível</div>
+                    <div class="armario">
+                        <div class="porta esquerda">
+                            <div class="fechadura"></div>
+                        </div>
+                        <div class="porta direita"></div>
+                    </div>
+                    <div class="card-info">
+                        <h3>Armário de Vestiário 1</h3>
+                        <p>Localização: Centro</p>
+                        <p>Preço: R$ 100/mês</p>
+                        <a href="#" class="btn">Ver Detalhes</a>
+                    </div>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </section>
+        </div>
+    </section>
+    <section id="depoimentos">
+        <h2>O que dizem nossos usuários</h2>
+        <div class="depoimentos">
+            <!-- Depoimentos aqui -->
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Armário Virtual. Todos os direitos reservados.</p>
+        <p><a href="#contato">Contato</a></p>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

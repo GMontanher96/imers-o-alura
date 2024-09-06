@@ -1,32 +1,24 @@
-/* Reset de estilos padrão do navegador */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Reset básico e estilo para o body */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Estilos para o header e o menu de navegação */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-}
-
-.navbar {
+    background: #333;
+    color: #ff7418;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo h1 {
-    margin: 0;
-    font-size: 1.5em;
+.logo {
+    font-size: 24px;
+}
+
+nav {
+    position: relative;
 }
 
 .menu-toggle {
@@ -35,356 +27,207 @@ header {
     cursor: pointer;
 }
 
-.bar {
-    background-color: #fff;
-    height: 3px;
+.menu-toggle .bar {
     width: 25px;
+    height: 3px;
+    background: #fff;
     margin: 3px 0;
-    border-radius: 5px;
-}
-
-/* Estilos para o menu */
-.nav-list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1em;
-    padding: 5px 10px;
-    display: block;
-}
-
-.nav-list a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 1;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 0;
-        border-bottom: 1px solid #575757;
-    }
-
-    .nav-list a {
-        padding: 15px;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Barra de Navegação */
-.navbar {
-    background-color: #333;
-    color: #fff;
-    padding: 15px 0;
-}
-
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
 }
 
 .nav-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin: 0 10px;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #ff7418;
     text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: #e74c3c;
-}
-
-/* Seção Principal */
-.main-section {
-    background-color: #e74c3c;
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-.main-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.main-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    color: #fff;
-    background-color: #27ae60;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.rest-button {
-    color: #333;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.cta-button:hover {
-    background-color: #219150;
-}
-.rest-button:hover {
-   
-}
-
-
-/* Seção de Restaurantes em Destaque */
-.featured-restaurants {
-    padding: 50px 20px;
-    background-color: #fff;
-}
-
-.featured-restaurants h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.restaurant-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.restaurant-item {
-    width: calc(33.333% - 20px);
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.restaurant-item:hover {
-    transform: translateY(-5px);
-}
-
-.restaurant-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.restaurant-item h3 {
-    padding: 15px;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.restaurant-item p {
-    padding-bottom: 15px;
-    color: #666;
-}
-
-/* Seção de Categorias */
-.categories {
-    padding: 50px 20px;
-    background-color: #f1f1f1;
-}
-
-.categories h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.category-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.category-item {
-    width: calc(25% - 20px);
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    padding: 15px;
-}
-
-.category-item a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-.category-item a:hover {
-    color: #e74c3c;
-}
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-}
-
-footer p {
-    font-size: 0.9em;
-}
-
-/* Estilos Responsivos */
-@media (max-width: 1024px) {
-    .restaurant-item {
-        width: calc(50% - 20px); /* Duas colunas em telas médias */
-    }
-
-    .category-item {
-        width: calc(50% - 20px); /* Duas colunas em telas médias */
-    }
-
-    .main-content h1 {
-        font-size: 2.5em;
-    }
-
-    .main-content p {
-        font-size: 1em;
-    }
 }
 
 @media (max-width: 768px) {
-    .restaurant-item,
-    .category-item {
-        width: 100%; /* Uma coluna em telas pequenas */
-    }
-
-    .navbar .container {
-        flex-direction: column;
-        text-align: center;
+    .menu-toggle {
+        display: flex;
     }
 
     .nav-links {
+        display: none;
         flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        background: #333;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .main-section {
-        padding: 40px 20px;
+    .nav-links.active {
+        display: flex;
     }
 
-    .main-content h1 {
-        font-size: 2em;
-    }
-
-    .main-content p {
-        font-size: 1em;
+    .nav-links li {
+        margin: 10px 0;
     }
 }
 
-@media (max-width: 480px) {
-    .navbar .container {
+.banner {
+    background: url('banner.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.filters {
+    margin: 20px;
+}
+
+.armarios {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.armarios .armario {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.333% - 20px);
+}
+
+.large-icon {
+    font-size: 158px;
+    color: #ff7418; /* Ajuste o tamanho conforme necessário */
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.status {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 100px;
+    background-color: #ff7b00; /* Laranja por padrão */
+}
+
+.status.disponível {
+    background-color: #28a745; /* Verde quando disponível */
+}
+
+.status.ocupado {
+    background-color: #ff7b00; /* Laranja quando ocupado */
+}
+
+.card {
+    position: relative; /* Necessário para o posicionamento absoluto do status */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.armario {
+    width: 100%;
+    height: 150px;
+    background-color: #ff7b00;
+    display: flex;
+    border: 2px solid #afafaf;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px; /* Adiciona margem superior para afastar do status */
+    margin: 20px 0;
+}
+
+.porta {
+    width: 40%;
+    height: 80%;
+    background-color: #aaa;
+    border: 1px solid #888;
+    margin: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.porta.esquerda {
+    border-right: 1px solid #888;
+}
+
+.fechadura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border: 2px solid #888;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    margin-top: 0;
+}
+
+.card-info p {
+    margin: 5px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .card-container {
         flex-direction: column;
-        text-align: center;
+        align-items: center;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
+    .card {
+        width: 100%;
+        max-width: 600px;
     }
+}
 
-    .main-section {
-        padding: 30px 15px;
-    }
-
-    .main-content h1 {
-        font-size: 1.8em; /* Título menor em telas pequenas */
-    }
-
-    .main-content p {
-        font-size: 0.9em; /* Texto menor em telas pequenas */
-    }
-
-    .cta-button {
-        padding: 8px 16px; /* Botão menor para telas pequenas */
-        font-size: 1em; /* Texto menor do botão para telas pequenas */
-    }
-
-    .rest-button {
-        padding: 8px 16px; /* Botão menor para telas pequenas */
-        font-size: 1em; /* Texto menor do botão para telas pequenas */
-    }
-
-    .featured-restaurants h2,
-    .categories h2 {
-        font-size: 2em; /* Títulos menores para telas pequenas */
-    }
-
-    .restaurant-item img,
-    .category-item {
-        height: 150px; /* Imagens menores para telas pequenas */
-    }
+footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
 }
