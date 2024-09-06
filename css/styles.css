@@ -1,233 +1,384 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
 header {
     background: #333;
-    color: #ff7418;
-    padding: 10px;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.logo {
-    font-size: 24px;
-}
-
-nav {
-    position: relative;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background: #fff;
-    margin: 3px 0;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
+header h1 {
     margin: 0;
+}
+
+nav ul {
+    list-style: none;
     display: flex;
 }
 
-.nav-links li {
-    margin: 0 10px;
+nav ul li {
+    margin-left: 1rem;
 }
 
-.nav-links a {
-    color: #ff7418;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        background: #333;
-        width: 200px;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 10px 0;
-    }
-}
-
-.banner {
-    background: url('banner.jpg') no-repeat center center;
-    background-size: cover;
-    color: #fff;
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.filters {
-    margin: 20px;
-}
-
-.armarios {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.armarios .armario {
-    border: 1px solid #ddd;
-    margin: 10px;
-    padding: 10px;
-    width: calc(33.333% - 20px);
-}
-
-.large-icon {
-    font-size: 158px;
-    color: #ff7418; /* Ajuste o tamanho conforme necessário */
-}
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-}
-
-.status {
-    width: 100%;
-    padding: 10px;
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-bottom: 100px;
-    background-color: #ff7b00; /* Laranja por padrão */
+    padding: 4rem 1rem;
 }
 
-.status.disponível {
-    background-color: #28a745; /* Verde quando disponível */
-}
-
-.status.ocupado {
-    background-color: #ff7b00; /* Laranja quando ocupado */
-}
-
-.card {
-    position: relative; /* Necessário para o posicionamento absoluto do status */
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 300px;
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.armario {
-    width: 100%;
-    height: 150px;
-    background-color: #ff7b00;
-    display: flex;
-    border: 2px solid #afafaf;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40px; /* Adiciona margem superior para afastar do status */
-    margin: 20px 0;
-}
-
-.porta {
-    width: 40%;
-    height: 80%;
-    background-color: #aaa;
-    border: 1px solid #888;
-    margin: 10px;
-    border-radius: 4px;
-    position: relative;
-}
-
-.porta.esquerda {
-    border-right: 1px solid #888;
-}
-
-.fechadura {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    height: 24px;
-    background-color: #fff;
-    border: 2px solid #888;
-}
-
-.card-info {
-    padding: 15px;
-}
-
-.card-info h3 {
-    margin-top: 0;
-}
-
-.card-info p {
-    margin: 5px 0;
+.hero h2 {
+    margin-bottom: 1rem;
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
+    background: #ff5722;
     color: #fff;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-    transition: background-color 0.3s;
+    border-radius: 0.25rem;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+.about, .restaurants {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about p {
+    margin-top: 1rem;
+}
+
+.restaurants {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a linha seguinte se necessário */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 1rem; /* Espaçamento entre os cards */
+}
+
+.restaurants .card {
+    background: #ff5722;
+    border: 1px solid #cf4a22;
+    border-radius: 0.25rem;
+    width: 350px; /* Ajusta a largura do card */
+    height: 200px; /* Ajusta a altura do card */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao card */
+}
+
+.restaurants .card a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+}
+
+.restaurants .card-content {
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.restaurants .card-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.restaurants .card-content p {
+    margin-bottom: 1rem;
+}
+
+.btn-transparent {
+    display: inline-block;
+    padding: 0.3rem 0.8rem; /* Ajusta o tamanho do botão */
+    border: 2px solid #ff5722; /* Cor da borda */
+    border-radius: 20px; /* Arredondamento das bordas, ajuste conforme necessário */
+    background: #cf4a22;
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.divider {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background-color: #eeeeee; /* Cor cinza claro */
+    z-index: -1; /* Coloca a div atrás dos cards */
 }
 
 @media (max-width: 768px) {
-    .card-container {
+    header .container {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    .card {
-        width: 100%;
-        max-width: 600px;
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .restaurants {
+        flex-direction: column; /* Alinha os cards em coluna em telas menores */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .restaurants .card {
+        width: 100%; /* Faz com que o card ocupe a largura total em telas menores */
+        height: auto; /* Permite que a altura se ajuste automaticamente */
     }
 }
+
+/* Seção do Mercado */
+#market {
+    background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.market-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem; /* Reduz o espaçamento inferior */
+}
+
+.market-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem; /* Reduz o espaçamento inferior */
+}
+
+/* Botão de Pesquisa */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 1.5rem auto; /* Centraliza e ajusta o espaçamento inferior */
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.7rem 2.5rem 0.75rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#search-button {
+    position: absolute;
+    right: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: #ff5722;
+}
+
+#search-button i {
+    font-size: 20px;
+}
+
+#search-button:hover i {
+    color: #e64a19;
+}
+
+/* Botão de Ofertas */
+.btn-market {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff5722;
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-market:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    .market-container {
+        padding: 1rem;
+    }
+
+    .market-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .market-content p {
+        font-size: 0.875rem;
+    }
+
+    .btn-market {
+        padding: 0.5rem 1rem;
+    }
+}
+
+#best-restaurants {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+#best-restaurants h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.restaurant-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Espaçamento entre os cards */
+}
+
+.restaurant-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.restaurant-card img {
+    width: 100%;
+    height: 180px;
+   
+}
+
+.division {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #fff;
+}
+
+#delivery-signup {
+    background-color: #f4f4f4;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+.signup-container h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.signup-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#signup-form input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn-signup {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-signup:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    .signup-container {
+        padding: 1rem;
+    }
+
+    .signup-container h2 {
+        font-size: 1.5rem;
+    }
+
+    #signup-form input {
+        font-size: 0.9rem;
+    }
+
+    .btn-signup {
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+}
+
+
 
 footer {
     background: #333;
     color: #fff;
-    padding: 10px;
+    padding: 1rem 0;
     text-align: center;
 }
