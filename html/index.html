@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterFood</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>InterFood</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="entregadores.html">Entregadores</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+       <!-- Botão WhatsApp -->
+       <a href="https://wa.me/5511999999999" id="whatsapp-button" target="_blank">
+        <img src="../images//wpp.jpg" alt="WhatsApp">
+    </a>
+    <section id="about" class="about">
+        <div class="container">
+            <p>O InterFood é a sua plataforma para descobrir e apoiar restaurantes locais. Conheça as histórias por trás de cada restaurante e faça parte da nossa comunidade.</p>
+        </div>
+    </section>
+        <!-- Modal -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <p>Parabéns! Você ganhou um cupom de 10%!<br><strong>Código:</strong> CUPOM10</p>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="search-container">
+          <input type="text" class="search-input" id="searchInput" placeholder="Buscar restaurantes...">
+          <span class="material-icons search-icon" id="searchIcon">search</span>
+        </div>
+      
+        <div id="searchCard" class="hidden">
+          <ul id="resultsList"></ul>
+        </div>
+      </div>
+      
+
+    <section id="restaurants" class="restaurants">
+        <div class="divider"></div> <!-- Divisória cinza atrás dos cards -->
+        <div class="container">
+            <div class="card">
+                <a href="pizza.html">
+                    <div class="card-content">
+                        <h3>Pizzarias</h3>
+                        <p class="btn-transparent">Ver opções</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Adicione mais cards conforme necessário -->
+        </div>
+         <div class="container">
+            <div class="card">
+                <a href="restaurantes.html">
+                    <div class="card-content">
+                        <h3>Lanchonetes</h3>
+                        <p class="btn-transparent">Ver opções</p>
+                    </div>
+                </div>
+                <!-- Adicione mais cards conforme necessário -->
+            </section>
+                </a>
+            </div>
+            <!-- Adicione mais cards conforme necessário -->
+        </div>
+    </section>
+            <!-- Depoimentos aqui -->
+    <section id="best-restaurants">
+        <h2>Melhores do Intefood</h2>
+        <div class="restaurant-cards-container">
+            <!-- Card 1 -->
+            <div class="restaurant-card">
+                <img src="restaurant1.jpg" alt="Marmitas">
+                <h3>Marmitaria da Lurdes</h3>
+                <p>Avaliação: ★★★★★</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="restaurant-card">
+                <img src="restaurant2.jpg" alt="Lanches">
+                <h3>Flipper Lanches</h3>
+                <p>Avaliação: ★★</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="restaurant-card">
+                <img src="restaurant3.jpg" alt="Pizzas">
+                <h3>Pizzaria Welerson</h3>
+                <p>Avaliação: ★★★★</p>
+            </div>
+        </div>
+    </section>
+    <section id="delivery-signup">
+        <div class="signup-container">
+            <h2>Cadastre-se como Entregador</h2>
+            <p>Junte-se a nós e comece a entregar hoje mesmo!</p>
+            <form id="signup-form">
+                <input type="text" id="name" name="name" placeholder="Nome Completo" required>
+                <span id="nomeError" class="error"></span>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <span id="emailError" class="error"></span>
+                <input type="tel" id="phone" name="phone" placeholder="Telefone" required>
+                <span id="telefoneError" class="error"></span>
+                <button type="submit" class="btn-signup">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 InterFood. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>

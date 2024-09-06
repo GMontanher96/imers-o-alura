@@ -1,390 +1,440 @@
-/* Reset de estilos padrão do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Reset básico e estilo para o body */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-}
-
-/* Estilos para o header e o menu de navegação */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: 1.5em;
-}
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    background-color: #fff;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-    border-radius: 5px;
-}
-
-/* Estilos para o menu */
-.nav-list {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.nav-list a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1em;
-    padding: 5px 10px;
-    display: block;
-}
-
-.nav-list a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        z-index: 1;
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list li {
-        margin: 0;
-        border-bottom: 1px solid #575757;
-    }
-
-    .nav-list a {
-        padding: 15px;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-}
-
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f9f9f9;
-    color: #333;
     line-height: 1.6;
 }
 
-/* Barra de Navegação */
-.navbar {
-    background-color: #333;
+header {
+    background:  #ff7b00;
     color: #fff;
-    padding: 15px 0;
+    padding: 1rem 0;
 }
 
-.navbar .container {
+header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.logo a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
-    font-weight: bold;
+header h1 {
+    margin: 0;
 }
 
-.nav-links {
+nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
 }
 
-.nav-links a {
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-size: 1em;
-    transition: color 0.3s;
 }
 
-.nav-links a:hover {
-    color: #e74c3c;
-}
-
-/* Seção Principal */
-.main-section {
-    background-color: #e74c3c;
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 60px 20px;
+    padding: 4rem 1rem;
 }
 
-.main-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+.hero h2 {
+    margin-bottom: 1rem;
 }
 
-.main-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
+.btn {
+    background: #ff5722;
     color: #fff;
-    background-color: #27ae60;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
     text-decoration: none;
-    transition: background-color 0.3s;
+    border-radius: 0.25rem;
 }
 
-.rest-button {
-    color: #333;
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
+.about, .restaurants {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.cta-button:hover {
-    background-color: #219150;
-}
-.rest-button:hover {
-   
+.about p {
+    margin-top: 1rem;
 }
 
-
-/* Seção de Restaurantes em Destaque */
-.featured-restaurants {
-    padding: 50px 20px;
-    background-color: #fff;
-}
-
-.featured-restaurants h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.restaurant-list {
+.restaurants {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-wrap: wrap; /* Permite que os cards quebrem para a linha seguinte se necessário */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 1rem; /* Espaçamento entre os cards */
+}
+
+.restaurants .card {
+    background: #ff5722;
+    border: 1px solid #cf4a22;
+    border-radius: 20px; /* Borda mais redonda */
+    margin-bottom: 20px;
+    width: 350px; /* Ajusta a largura do card */
+    height: 200px; /* Ajusta a altura do card */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao card */
+}
+
+.restaurants .card a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    height: 100%;
+}
+
+.restaurants .card-content {
+    padding: 1rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
-.restaurant-item {
-    width: calc(33.333% - 20px);
+.restaurants .card-content h3 {
+    margin-bottom: 0.5rem;
+}
+
+.restaurants .card-content p {
+    margin-bottom: 1rem;
+}
+
+.btn-transparent {
+    display: inline-block;
+    padding: 0.3rem 0.8rem; /* Ajusta o tamanho do botão */
+    border: 2px solid #ff5722; /* Cor da borda */
+    border-radius: 20px; /* Arredondamento das bordas, ajuste conforme necessário */
+    background: #cf4a22;
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.divider {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background-color: #d8d2d2; /* Cor cinza claro */
+    z-index: -1; /* Coloca a div atrás dos cards */
+}
+
+.hidden {
+    display: none;
+  }
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    .restaurants {
+        flex-direction: column; /* Alinha os cards em coluna em telas menores */
+        align-items: center; /* Centraliza os cards */
+    }
+
+    .restaurants .card {
+        width: 100%; /* Faz com que o card ocupe a largura total em telas menores */
+        height: auto; /* Permite que a altura se ajuste automaticamente */
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    width: 250px;
+    color: #ff7b00;
+    background-color: #fff4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    z-index: 1000;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.close {
+    font-size: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Seção do Mercado */
+#market {
     background-color: #f9f9f9;
+    padding: 2rem 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.market-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem; /* Reduz o espaçamento inferior */
+}
+
+.market-content p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem; /* Reduz o espaçamento inferior */
+}
+
+
+/* Botão de Ofertas */
+.btn-market {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff5722;
+    color: #ffffff;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-market:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 768px) {
+    .market-container {
+        padding: 1rem;
+    }
+
+    .market-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .market-content p {
+        font-size: 0.875rem;
+    }
+
+    .btn-market {
+        padding: 0.5rem 1rem;
+    }
+}
+
+#best-restaurants {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+}
+
+#best-restaurants h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.restaurant-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Espaçamento entre os cards */
+}
+
+.restaurant-card {
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    width: 300px;
+    padding: 1rem;
     text-align: center;
     transition: transform 0.3s;
 }
 
-.restaurant-item:hover {
-    transform: translateY(-5px);
-}
-
-.restaurant-item img {
+.restaurant-card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 180px;
+
 }
 
-.restaurant-item h3 {
-    padding: 15px;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.restaurant-item p {
-    padding-bottom: 15px;
-    color: #666;
-}
-
-/* Seção de Categorias */
-.categories {
-    padding: 50px 20px;
-    background-color: #f1f1f1;
-}
-
-.categories h2 {
-    text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-.category-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.category-item {
-    width: calc(25% - 20px);
+.division {
+    transition: background-color 0.3s, color 0.3s;
     background-color: #fff;
+    border: 2px solid #888;
+}
+
+#delivery-signup {
+    background-color: #f4f4f4;
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-container {
+    background-color: #ffffff;
     border-radius: 10px;
+    padding: 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 15px;
+    max-width: 400px;
+    width: 100%;
 }
 
-.category-item a {
+.signup-container h2 {
+    font-size: 1.75rem;
     color: #333;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s;
+    margin-bottom: 1rem;
 }
 
-.category-item a:hover {
-    color: #e74c3c;
+.signup-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
 }
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+#signup-form {
+    display: flex;
+    flex-direction: column;
 }
 
-footer p {
-    font-size: 0.9em;
+#signup-form input {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1rem;
 }
 
-/* Estilos Responsivos */
-@media (max-width: 1024px) {
-    .restaurant-item {
-        width: calc(50% - 20px); /* Duas colunas em telas médias */
-    }
+.btn-signup {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    .category-item {
-        width: calc(50% - 20px); /* Duas colunas em telas médias */
-    }
-
-    .main-content h1 {
-        font-size: 2.5em;
-    }
-
-    .main-content p {
-        font-size: 1em;
-    }
+.btn-signup:hover {
+    background-color: #e64a19;
 }
 
 @media (max-width: 768px) {
-    .restaurant-item,
-    .category-item {
-        width: 100%; /* Uma coluna em telas pequenas */
+    .signup-container {
+        padding: 1rem;
     }
 
-    .navbar .container {
-        flex-direction: column;
-        text-align: center;
+    .signup-container h2 {
+        font-size: 1.5rem;
+    }
+    #signup-form input {
+        font-size: 0.9rem;
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
-
-    .main-section {
-        padding: 40px 20px;
-    }
-
-    .main-content h1 {
-        font-size: 2em;
-    }
-
-    .main-content p {
-        font-size: 1em;
+    .btn-signup {
+        padding: 0.6rem;
+        font-size: 0.9rem;
     }
 }
 
-@media (max-width: 480px) {
-    .navbar .container {
-        flex-direction: column;
-        text-align: center;
-    }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #searchCard {
+    width: 300px;
+    height: 150px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .search-container {
+    position: relative;
+  }
+  
+  .search-input {
+    width: 300px;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid  #ff7b00;
+    border-radius: 25px;
+  }
+  
+  .search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #ff7b00;
+  }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 15px;
-    }
+  #whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #e6e6e6; /* Cor verde do WhatsApp */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 1000;
+}
 
-    .main-section {
-        padding: 30px 15px;
-    }
+#whatsapp-button img {
+    width: 40px;
+    height: 40px;
+}
 
-    .main-content h1 {
-        font-size: 1.8em; /* Título menor em telas pequenas */
-    }
-
-    .main-content p {
-        font-size: 0.9em; /* Texto menor em telas pequenas */
-    }
-
-    .cta-button {
-        padding: 8px 16px; /* Botão menor para telas pequenas */
-        font-size: 1em; /* Texto menor do botão para telas pequenas */
-    }
-
-    .rest-button {
-        padding: 8px 16px; /* Botão menor para telas pequenas */
-        font-size: 1em; /* Texto menor do botão para telas pequenas */
-    }
-
-    .featured-restaurants h2,
-    .categories h2 {
-        font-size: 2em; /* Títulos menores para telas pequenas */
-    }
-
-    .restaurant-item img,
-    .category-item {
-        height: 150px; /* Imagens menores para telas pequenas */
-    }
+footer {
+    background: #ff7b00;;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
 }

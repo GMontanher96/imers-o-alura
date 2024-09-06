@@ -1,0 +1,23 @@
+[
+    {
+      "nome": "Restaurante Saboroso",
+      "endereco": "Rua das Flores, 123",
+      "cidade": "São Paulo"
+    },
+    {
+      "nome": "Café Gourmet",
+      "endereco": "Avenida Paulista, 456",
+      "cidade": "São Paulo"
+    },
+    {
+      "nome": "Pizzaria Bella Italia",
+      "endereco": "Rua dos Pães, 789",
+      "cidade": "Campinas"
+    },
+    {
+      "nome": "Churrascaria do Sul",
+      "endereco": "Avenida Brasil, 1010",
+      "cidade": "Curitiba"
+    }
+  ]
+  
