@@ -115,3 +115,34 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('closeModal').addEventListener('click', function() {
   document.getElementById('modal').classList.add('hidden');
 });
+
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav-links');
+const navLinks = document.querySelectorAll('.nav-links li');
+
+burger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('menu-modal');
+  const openBtn = document.getElementById('open-menu');
+  const closeBtn = document.querySelector('.close-btn');
+
+  if (openBtn && modal && closeBtn) {
+      openBtn.addEventListener('click', () => {
+          modal.style.display = 'block';
+      });
+
+      closeBtn.addEventListener('click', () => {
+          modal.style.display = 'none';
+      });
+
+      window.addEventListener('click', (event) => {
+          if (event.target === modal) {
+              modal.style.display = 'none';
+          }
+      });
+  }
+});
