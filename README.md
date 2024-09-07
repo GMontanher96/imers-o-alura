@@ -35,6 +35,15 @@ InterFood é um site bacana onde você pode explorar restaurantes incríveis na 
 **cd interfood**
 Abra o arquivo index.html no seu navegador e divirta-se explorando o site! 🌐
 
+Obs; Para buscar um restaurante digite essas cidades: 
+
+      "cidade": "Rio de Janeiro"
+      "cidade": "Iacanga"
+      "cidade": "Reginopólis"
+      "cidade": "Pirajui"
+      "cidade": "Bauru"
+ 
+
 ** Contribuições **
 Se você quiser contribuir com melhorias, fique à vontade! Abra um pull request ou envie uma issue com suas sugestões.
 
