@@ -2,6 +2,8 @@
 
 Bem-vindo ao InterFood, a sua plataforma para descobrir e apoiar restaurantes locais! 🍕🍔🥗
 
+obs: por algum motivo o acesso as páginas pelo vercel nao esta funcionando :(
+
 ## O que é o InterFood?
 
 InterFood é um site bacana onde você pode explorar restaurantes incríveis na sua área. Quer uma pizza deliciosa, um lanche saboroso ou uma marmita caseira? Nós temos tudo isso e muito mais! Além disso, você pode se cadastrar como entregador e fazer parte da nossa equipe. 🚀
